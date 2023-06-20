@@ -8,12 +8,14 @@ import org.apache.ibatis.annotations.Param;
  * @ClassName PaymentDao
  * @Description TODO
  * @Author cc
- * @Date 2023/6/20 11:28 上午
+ * @Date 2023/6/20 10:00 下午
  * @Version 1.0
  */
 @Mapper
 public interface PaymentDao {
-    public int create(Payment payment);
 
-    public Payment getPaymentById( Long id);
+    int create(Payment payment);
+
+    Payment getPaymentById(@Param("id") Long id);
+
 }
