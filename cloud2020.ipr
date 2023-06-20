@@ -100,6 +100,8 @@ under the License.
       <!-- module filepath="$$PROJECT_DIR$$/${pom.artifactId}.iml"/ -->  
       <module filepath="$PROJECT_DIR$/cloud2020.iml"/>
       <module filepath="$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml"/>
+      <module filepath="$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml"/>
+      <module filepath="$PROJECT_DIR$/cloud-commons/cloud-commons.iml"/>
     </modules> 
   </component>  
   <UsedPathMacros> 
