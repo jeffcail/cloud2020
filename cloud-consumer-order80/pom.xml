@@ -17,6 +17,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- eureka-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+
         <!-- 引入自己定义的通用包 -->
         <dependency>
             <groupId>org.jeffcail.springcloud</groupId>
