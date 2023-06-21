@@ -31,3 +31,18 @@ ZooKeeper是一个集中式服务，用于维护配置信息、命名、提供�
 zookeeper 数据模型: 其实就是用来存储和处理数据的。类似于数据库系统。不过 zookeeper 的数据模型更像电脑中的文件系统，有一个根文件夹
 （固定的根节点 / ），下面有很多字文件夹（可以在根节点创建多个子节点，支持逐级创建）
 ![](./images/zookeeper.png)
+
+### consul
+#### what is consul?
+HashiCorp Consul is a service networking solution that enables teams to manage secure network connectivity between services and across on-prem and multi-cloud environments and runtimes. Consul offers service discovery, service mesh, traffic management, and automated updates to network infrastructure device. You can use these features individually or together in a single Consul deployment.
+
+Consul 是一套开源的分布式服务发现和配置管理系统。由 HashiCorp 公司使用Go语言开发。
+
+提供了微服务系统中的服务治理、配置中心、控制总线等。这些功能即可以单独使用，也可以一起使用构建全方位的服务网格。
+
+#### 功能
+服务发现 提供http 和 dns 两种发现方式
+监控检测 支持多方式， http、tcp、docker、shell脚本定制化
+KV存储 key、value 的存储方式
+多数据中心 consul支持多数据中心
+可视化web界面
