@@ -23,3 +23,11 @@ Eureka server并维持心跳连接。使开发人员可以通过Eureka serve来�
 * Service Consumer：服务消费方：从Eureka获取注册服务列表，从而能够消费服务
 
 ![img.png](./images/Eureka.png)
+
+## zookeeper
+ZooKeeper是一个集中式服务，用于维护配置信息、命名、提供分布式同步、提供组服务. 支持高度可靠的分布式协调.
+
+### zookeeper 数据模型和分层命名空间
+zookeeper 数据模型: 其实就是用来存储和处理数据的。类似于数据库系统。不过 zookeeper 的数据模型更像电脑中的文件系统，有一个根文件夹
+（固定的根节点 / ），下面有很多字文件夹（可以在根节点创建多个子节点，支持逐级创建）
+![](./images/zookeeper.png)
