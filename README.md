@@ -63,3 +63,57 @@ OpenFeign 提供了一种**声明式的远程调用接口**。
 Declarative REST Client: Feign creates a dynamic implementation of an interface decorated with JAX-RS or Spring MVC annotations
 
 在主启动类上通过注解 @EnableFeignClients、 接口上通过注解 @FeignClient 实现
+
+## Hystrix
+### 一、Hystrix 简介
+
+hystrix是Netlifx开源的一款容错框架，防雪崩利器，具备[服务降级](https://so.csdn.net/so/search?q=服务降级&spm=1001.2101.3001.7020)，服务熔断，依赖隔离，监控(Hystrix Dashboard)等功能。
+
+<font color="red">Hystrix is no longer in active development, and is currently in maintenance mode.</font>
+
+<font color="red">Hystrix 已经停更</font>
+
+----
+
+### 二、Hystrix 的作用
+
+* 服务降级
+* 服务熔断
+* 服务限流
+
+----
+
+### 三、Hystrix使用场景
+
+1. 服务超时
+2. 服务宕机（服务崩掉、机房断电、服务故障等）
+3. 线程打满
+4. 高并发场景
+5. 等等
+
+----
+
+### 四、功能点简介
+
+#### 1、服务降级
+
+服务降级是当服务器压力剧增的情况下，根据当前业务情况及流量对一些服务和页面有策略的降级，以此释放服务器资源以保证核心任务的正常运行
+
+#### 2、服务熔断
+
+某服务出现不可用或响应超时的情况时，为了防止整个系统出现雪崩，暂时停止对该服务的调用.
+
+#### 3、服务降级VS服务熔断
+
+相同点：
+
+- 目标一致 都是从可用性和可靠性出发，为了防止系统崩溃；
+- 用户体验类似 最终都让用户体验到的是某些功能暂时不可用；
+
+不同点：
+
+- 触发原因不同 服务熔断一般是某个服务（下游服务）故障引起，而服务降级一般是从整体负荷考虑
+
+#### 4、服务限流
+
+只允许指定数量的事务进入系统处理，超过的部分将被拒绝服务，排队或者降级处理
