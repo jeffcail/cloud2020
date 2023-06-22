@@ -12,3 +12,6 @@ eureka:
 #  ReadTimeout: 5000
 #  # 建立连接 超时时间 5秒
 #  ConnectTimeout: 5000
+feign:
+  hystrix:
+    enabled: true
