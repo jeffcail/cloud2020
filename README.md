@@ -32,7 +32,7 @@ zookeeper 数据模型: 其实就是用来存储和处理数据的。类似于�
 （固定的根节点 / ），下面有很多字文件夹（可以在根节点创建多个子节点，支持逐级创建）
 ![](./images/zookeeper.png)
 
-### consul
+## consul
 #### what is consul?
 HashiCorp Consul is a service networking solution that enables teams to manage secure network connectivity between services and across on-prem and multi-cloud environments and runtimes. Consul offers service discovery, service mesh, traffic management, and automated updates to network infrastructure device. You can use these features individually or together in a single Consul deployment.
 
@@ -46,3 +46,20 @@ Consul 是一套开源的分布式服务发现和配置管理系统。由 HashiC
 KV存储 key、value 的存储方式
 多数据中心 consul支持多数据中心
 可视化web界面
+
+## OpenFeign
+### 简介
+
+OpenFeign 提供了一种**声明式的远程调用接口**。
+
+###  OpenFeign 能做什么
+
+目的是为了简易HTTP客户端的编写。
+
+之前在 笔记中介绍了 Ribbon + RestTemplate 的使用。Ribbon + RestTemplate 是多http请求做了封装处理，形成了模版化的调用。但是在实际的开发中，由于对服务依赖的调用可能不止一处，往往一个接口被多处调用，所以需要对每个微服务进行封装。鉴于此 Feign 在此基础上为我们提供了封装操作，由Feign 帮我门定义和实现依赖服务接口的定义。因此简化了我们的操作，只需要创建一个接口并使用注解的形式来配置它（比如Mapper接口上标注@Mapper注解，现在是在一个微服务接口上标注一个@FeignClient注解），就可以完成对服务接口的绑定，简化了Spring cloud Ribbon使用时候封装客户端的开发量
+
+### 如何使用
+
+Declarative REST Client: Feign creates a dynamic implementation of an interface decorated with JAX-RS or Spring MVC annotations
+
+在主启动类上通过注解 @EnableFeignClients、 接口上通过注解 @FeignClient 实现
