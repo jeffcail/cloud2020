@@ -6,9 +6,9 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-# 设置feigin 客户端超时时间（OpenFeign默认支持ribbon）
-ribbon:
-  # 读超时时间 5秒
-  ReadTimeout: 5000
-  # 建立连接 超时时间 5秒
-  ConnectTimeout: 5000
+## 设置feigin 客户端超时时间（OpenFeign默认支持ribbon）
+#ribbon:
+#  # 读超时时间 5秒
+#  ReadTimeout: 5000
+#  # 建立连接 超时时间 5秒
+#  ConnectTimeout: 5000
