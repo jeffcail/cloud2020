@@ -13,3 +13,8 @@ ribbon:
   ReadTimeout: 5000
   # 建立连接 超时时间 5秒
   ConnectTimeout: 5000
+
+logging:
+  level:
+    # 以什么日志等级 监控哪个接口
+    com.jeffcail.springcloud.service.PaymentFeignService: debug
